@@ -1,0 +1,39 @@
+<div class="events-filter-section">
+    <label class="date-label">Here, you can filter events by Month:</label>
+    <mat-chip-listbox aria-label="Month selection">
+        <mat-chip-option  [selected]="month.id == selectedMonth" *ngFor="let month of monthsArray" (click)="onMonthChange(month.id)" color="accent">
+            <span>{{month.value}}</span>
+            <span *ngIf="month.id == selectedMonth" class="events-count-badge">{{eventsData.length}}</span>
+        </mat-chip-option>
+    </mat-chip-listbox>
+</div>
+
+<mat-card *ngIf="emptyMessage" class="no-events-card month-card">
+    <mat-card-content>
+        Sorry, there are no events scheduled for the selected Month.Please try with another month. Thanks..!!
+    </mat-card-content>
+</mat-card>
+
+<mat-list *ngIf="showList">
+    <mat-list-item *ngFor="let item of eventsData; let i = index">
+        <picture>
+            <source data-srcset="item.images.mobile"
+                media="(max-width: 575px)" alt="events details"
+                [srcset]="item.images.mobile">
+            <source  data-srcset="item.images.desktop"
+                media="(max-width: 991px)" alt="events details"
+                [srcset]="item.images.tablet_port">
+            <source  data-srcset="item.images.desktop"
+                media="(max-width: 1199px)" alt="events details"
+                [srcset]="item.images.tablet_land">
+
+            <img class="lazyloaded" data-src="item.images.desktop"
+                width="100%" alt="events details"
+                [src]="item.images.desktop">
+        </picture>
+        <div class="row item-card-image">
+            <h2 class="col-12">{{item.title}}</h2>
+            <p class="col-12">{{item.description}}</p>
+        </div>
+    </mat-list-item>
+</mat-list>

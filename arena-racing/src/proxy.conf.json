@@ -1,0 +1,10 @@
+
+{
+    "/api/*": {
+      "target": "https://api.arenaracingcompany.co.uk",
+      "secure": false,
+      "logLevel": "debug",
+      "changeOrigin": true,
+      "pathRewrite": { "^/api": "" }
+    }
+   }

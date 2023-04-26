@@ -1,0 +1,99 @@
+.events-date-picker .mat-calendar-period-button {
+    pointer-events: none;
+  }
+  
+  .events-date-picker .mat-calendar-arrow {
+    display: none;
+  }
+
+  .date-label {
+    font-family: rawline;
+    padding-right: 2%;
+  }
+
+  input {
+    font-family: rawline;
+    padding: 6px 22px;
+    border: 2px solid #855b45;
+    border-radius: 25px;
+    font-size: 17px;
+  }
+ 
+
+  mat-chip-option {
+    background-color: grey !important;
+    color: white !important;
+    border-radius:2px !important;
+    width:150px;
+  }
+
+  mat-chip-option.mat-mdc-chip-selected.mdc-evolution-chip--selected {
+    background-color: brown !important;
+  }
+
+  .month-card {
+    background-color: #cc3333 !important;
+    color: #fff;
+    margin: 20px;
+    padding: 2%;
+    font-size: 1rem;
+  }
+
+  .event-image {
+    width:100%;
+    border-bottom: 4px solid #B30838;
+  }
+
+  mat-list-item {
+    position: relative;
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.2);
+    margin-bottom:20px;
+    cursor: pointer !important;
+  }
+
+  mat-list-item :hover {
+    background-color: rgb(186, 218, 224);
+  }
+
+  .item-card-image {
+    padding:0 20px;
+  }
+
+  .count-list {
+    color:red;
+    float: right;
+  }
+
+  .event-image {
+    max-width:100%;
+  }
+
+  .badge-display {
+    height: 19px;
+    width: 20px;
+    background-color: #8faf5b;
+    border-radius: 50%;
+    display: block;
+    color: #fff;
+    font-size: .7em;
+    font-weight: 700;
+    line-height: 17px;
+    margin-top: 4px;
+  }
+
+  .events-count-badge {
+    height: 20px;
+    width: 20px;
+    background-color: #49b025;
+    border-radius: 50%;
+    display: block;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+    margin-top: 4px;
+    display: inline-block;
+    text-align: center;
+    /* float: right; */
+    margin-left: 12px;
+  }
